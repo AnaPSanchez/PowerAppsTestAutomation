@@ -11,7 +11,7 @@ resources:
       name: pruebauno
       ref: master
       # Name of the GitHub OAuth ADO Service Connection
-      endpoint: AnaPSanchez
+      endpoint: PowerAppsTestAutomation
 
 parameters:
  - name: image
@@ -73,6 +73,6 @@ jobs:
       OnlineUrl: $(PortalUrl)
       BrowserType: ${{ parameters.BrowserType }}
       # File location format is /s/TeamProjectName/FilePathToTestAutomationURLs.json
-      TestAutomationURLFilePath: $(Build.SourcesDirectory)\$(pruebauno)\$(TestURLs.json)
+      TestAutomationURLFilePath: $(Build.SourcesDirectory)\$(PowerAppsTestAutomation)\$(TestURLs.json)
       UsePrivateMode: $(PrivateMode)
       LoginMethod: ${{ parameters.LoginMethod }}
